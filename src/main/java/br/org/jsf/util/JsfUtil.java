@@ -715,7 +715,8 @@ public class JsfUtil {
       TabView tabView = (TabView) JsfUtil.component(id);
       return tabView;
    }
-   
+
+   // http://localhost:8080/sep/admin/sorteio/
    public static String getRequestURL() {
       return JsfUtil.request().getRequestURL().toString();
    }
@@ -724,6 +725,7 @@ public class JsfUtil {
       return getRequestURL();
    }
    
+   // /sep/admin/sorteio/
    public static String getRequestURI() {
       return JsfUtil.request().getRequestURI().toString();
    }
@@ -731,11 +733,5 @@ public class JsfUtil {
    public static String requestURI() {
       return getRequestURI();
    }
-   
-   // System.out.println(JSF.request().getRequestURL());
-   // http://localhost:8080/sep/admin/sorteio/
-   
-   // System.out.println(JSF.request().getRequestURI());
-   // /sep/admin/sorteio/
    
 }
