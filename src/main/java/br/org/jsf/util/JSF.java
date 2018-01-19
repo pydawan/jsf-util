@@ -51,7 +51,7 @@ import org.primefaces.context.RequestContext;
  * @version v1.0.0 10/09/2017
  * @sicne v1.0.0 
  */
-public class JsfUtil {
+public class JSF {
    
    private static final UISelectItems EMPTY_UI_SELECT_ITEMS = new UISelectItems();
    private static final List<SelectItem> EMPTY_SELECT_ITEM = new ArrayList<>(0);
@@ -557,7 +557,7 @@ public class JsfUtil {
          if (isEmptyOrNull(id)) {
             selectOneMenu = new SelectOneMenu();
          } else {
-            selectOneMenu = JsfUtil.selectOneMenu(id);
+            selectOneMenu = JSF.selectOneMenu(id);
          }
          selectOneMenu.getChildren().add(uiSelectItems(list));
       }
@@ -707,18 +707,18 @@ public class JsfUtil {
    }
    
    public static Tab tab(String id) {
-      Tab tab = (Tab) JsfUtil.component(id);
+      Tab tab = (Tab) JSF.component(id);
       return tab;
    }
    
    public static TabView tabView(String id) {
-      TabView tabView = (TabView) JsfUtil.component(id);
+      TabView tabView = (TabView) JSF.component(id);
       return tabView;
    }
 
    // http://localhost:8080/sep/admin/sorteio/
    public static String getRequestURL() {
-      return JsfUtil.request().getRequestURL().toString();
+      return JSF.request().getRequestURL().toString();
    }
    
    public static String requestURL() {
@@ -727,7 +727,7 @@ public class JsfUtil {
    
    // /sep/admin/sorteio/
    public static String getRequestURI() {
-      return JsfUtil.request().getRequestURI().toString();
+      return JSF.request().getRequestURI().toString();
    }
    
    public static String requestURI() {
